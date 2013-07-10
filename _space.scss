@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Spacing-specific utilities
+   ========================================================================== */
+
+/**
+ * Used to adjust the default spacing between components
+ * Use with great care!
+ *
+ * u-<type><direction><size>
+ *
+ * A = all
+ * T = top
+ * R = right
+ * B = bottom
+ * L = left
+ * H = horizontal
+ * V = vertical
+ *
+ * n = none
+ * s = small
+ * m = medium
+ * l = large
+ * h = huge
+ * u = ultra
+ */
+
+$utilsSpaceTypes:         (padding margin) !default;
+
+$utilsSpaceDirections:    (A  T      R        B         L       H  V) !default;
+$utilsSpaceDirectionVals: ('' '-top' '-right' '-bottom' '-left' '' '') !default;
+
+$utilsSpaceSizes:         (n s   m    l    h    u) !default;
+$utilsSpaceSizeVals:      (0 5px 10px 20px 40px 80px) !default;
+
+@each $type in $utilsSpaceTypes {
+  @for $i1 from 1 through length($utilsSpaceDirections) {
+    $dir: nth($utilsSpaceDirections, $i1);
+    $dirVal: nth($utilsSpaceDirectionVals, $i1);
+
+    @for $i2 from 1 through length($utilsSpaceSizes) {
+      $size: nth($utilsSpaceSizes, $i2);
+      $sizeVal: nth($utilsSpaceSizeVals, $i2);
+
+      .u-#{$type}#{$dir}#{$size} {
+        @if $dir == 'H' {
+          #{$type}-left: $sizeVal !important;
+          #{$type}-right: $sizeVal !important;
+        } @else if $dir == 'V' {
+          #{$type}-top: $sizeVal !important;
+          #{$type}-bottom: $sizeVal !important;
+        } @else {
+          #{$type}#{$dirVal}: $sizeVal !important;
+        }
+      }
+    }
+  }
+}
