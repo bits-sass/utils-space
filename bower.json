@@ -1,6 +1,6 @@
 {
   "name": "bits-css-utils-space",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Lukáš Mladý",
   "main": "_space.scss"
 }
