@@ -3,10 +3,33 @@
    ========================================================================== */
 
 /**
+ * Variables
+ *
+ * It is recommended to override these.
+ *
+ * 1. Namespace of bits.css's classes.
+ * 2. Specifies list of generated <type>s.
+ * 3. Specifies list of generated <direction>s.
+ * 4. Specifies list of specific direction values.
+ * 5. Specifies list of generated <size>s.
+ * 6. Specifies list of specific size values.
+ */
+
+$bits-ns: 'bits-' !default; /* 1 */
+
+$bits-space-types: (padding margin) !default; /* 2 */
+
+$bits-space-directions:     (A  T      R        B         L       H  V) !default; /* 3 */
+$bits-space-direction-vals: ('' '-top' '-right' '-bottom' '-left' '' '') !default; /* 4 */
+
+$bits-space-sizes:     (n s   m    l) !default; /* 5 */
+$bits-space-size-vals: (0 5px 10px 20px) !default; /* 6 */
+
+/**
  * Used to adjust the default spacing between components
  * Use with great care!
  *
- * u-<type><direction><size>
+ * u-<type><DIRECTION><size>
  *
  * A = all
  * T = top
@@ -20,28 +43,22 @@
  * s = small
  * m = medium
  * l = large
- * h = huge
- * u = ultra
+ *
+ * ------------------
+ * Output example:
+ *
  */
 
-$utilsSpaceTypes:         (padding margin) !default;
+@each $type in $bits-space-types {
+  @for $i1 from 1 through length($bits-space-directions) {
+    $dir: nth($bits-space-directions, $i1);
+    $dirVal: nth($bits-space-direction-vals, $i1);
 
-$utilsSpaceDirections:    (A  T      R        B         L       H  V) !default;
-$utilsSpaceDirectionVals: ('' '-top' '-right' '-bottom' '-left' '' '') !default;
+    @for $i2 from 1 through length($bits-space-sizes) {
+      $size: nth($bits-space-sizes, $i2);
+      $sizeVal: nth($bits-space-size-vals, $i2);
 
-$utilsSpaceSizes:         (n s   m    l    h    u) !default;
-$utilsSpaceSizeVals:      (0 5px 10px 20px 40px 80px) !default;
-
-@each $type in $utilsSpaceTypes {
-  @for $i1 from 1 through length($utilsSpaceDirections) {
-    $dir: nth($utilsSpaceDirections, $i1);
-    $dirVal: nth($utilsSpaceDirectionVals, $i1);
-
-    @for $i2 from 1 through length($utilsSpaceSizes) {
-      $size: nth($utilsSpaceSizes, $i2);
-      $sizeVal: nth($utilsSpaceSizeVals, $i2);
-
-      .u-#{$type}#{$dir}#{$size} {
+      .#{$bits-ns}u-#{$type}#{$dir}#{$size} {
         @if $dir == 'H' {
           #{$type}-left: $sizeVal !important;
           #{$type}-right: $sizeVal !important;
