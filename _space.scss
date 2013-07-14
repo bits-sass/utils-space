@@ -7,7 +7,7 @@
  *
  * It is recommended to override these.
  *
- * 1. Namespace of bits.css's classes.
+ * 1. Utility namespace.
  * 2. Specifies list of generated <type>s.
  * 3. Specifies list of generated <direction>s.
  * 4. Specifies list of specific direction values.
@@ -15,7 +15,7 @@
  * 6. Specifies list of specific size values.
  */
 
-$bits-ns: 'bits-' !default; /* 1 */
+$bits-utils-ns: 'bits-' !default; /* 1 */
 
 $bits-space-types: (padding margin) !default; /* 2 */
 
@@ -44,9 +44,18 @@ $bits-space-size-vals: (0 5px 10px 20px) !default; /* 6 */
  * m = medium
  * l = large
  *
- * ------------------
+ * ---------------
  * Output example:
  *
+ * .u-paddingAn {        |    .u-paddingAs {          |    .u-paddingAm {
+ *   padding: 0;         |      padding: 5px;         |      padding: 10px;
+ * }                     |    }                       |    }
+ *
+ * ...
+ *
+ * .u-marginRn {         |    .u-marginRs {           |    .u-marginRm {
+ *   margin-right: 0;    |      margin-right: 5px;    |      margin-right: 10px;
+ * }                     |    }                       |    }
  */
 
 @each $type in $bits-space-types {
@@ -58,15 +67,15 @@ $bits-space-size-vals: (0 5px 10px 20px) !default; /* 6 */
       $size: nth($bits-space-sizes, $i2);
       $sizeVal: nth($bits-space-size-vals, $i2);
 
-      .#{$bits-ns}u-#{$type}#{$dir}#{$size} {
+      .#{$bits-utils-ns}u-#{$type}#{$dir}#{$size} {
         @if $dir == 'H' {
-          #{$type}-left: $sizeVal !important;
-          #{$type}-right: $sizeVal !important;
+          #{$type}-left: $sizeVal;
+          #{$type}-right: $sizeVal;
         } @else if $dir == 'V' {
-          #{$type}-top: $sizeVal !important;
-          #{$type}-bottom: $sizeVal !important;
+          #{$type}-top: $sizeVal;
+          #{$type}-bottom: $sizeVal;
         } @else {
-          #{$type}#{$dirVal}: $sizeVal !important;
+          #{$type}#{$dirVal}: $sizeVal;
         }
       }
     }
