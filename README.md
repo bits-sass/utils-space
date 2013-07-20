@@ -1,23 +1,21 @@
-# Bits.scss utilities: space
+# Bits.sass utilities: space
 
-Utility classes for spacing-related CSS. See [other utilities](https://github.com/bits-scss/utils).
+Utility classes for spacing-related CSS. See [other utilities](https://github.com/bits-sass/utils).
 
-Read more about [Bits.scss toolkit](https://github.com/bits-scss/bits.scss).
+Read more about [Bits.sass toolkit](https://github.com/bits-sass/bits.sass).
 
 ## Installation
 
-* __Bower:__ `bower install --save bits-scss-utils-space`
-* __Download:__ [zip](https://github.com/bits-scss/utils-space/zipball/master), [tar.gz](https://github.com/bits-scss/utils-space/tarball/master)
-* __Git:__ `git clone https://github.com/bits-scss/utils-space.git`
+* __Bower:__ `bower install --save bits-sass-utils-space`
+* __Download:__ [zip](https://github.com/bits-sass/utils-space/zipball/master), [tar.gz](https://github.com/bits-sass/utils-space/tarball/master)
+* __Git:__ `git clone https://github.com/bits-sass/utils-space.git`
 
 ## Available SASS variables
 
 * `bits-utils-ns` - utilities namespace, defaults to 'bits-'
 * `bits-space-types` - specifies list of generated types (margin and / or padding)
 * `bits-space-directions` - specifies list of generated `<D>` directions
-* `bits-space-direction-vals` - specifies list of specific direction values
 * `bits-space-sizes` - specifies list of generated `<s>` sizes
-* `bits-space-size-vals` - specifies list of specific size values
 
 ## Available utility classes
 
