@@ -10,20 +10,29 @@
  * 1. Utility namespace.
  * 2. Specifies list of generated <type>s.
  * 3. Specifies list of generated <direction>s.
- * 4. Specifies list of specific direction values.
- * 5. Specifies list of generated <size>s.
- * 6. Specifies list of specific size values.
+ * 4. Specifies list of generated <size>s.
  */
 
 $bits-utils-ns: 'bits-' !default; /* 1 */
 
 $bits-space-types: (padding margin) !default; /* 2 */
 
-$bits-space-directions:     (A  T      R        B         L       H  V) !default; /* 3 */
-$bits-space-direction-vals: ('' '-top' '-right' '-bottom' '-left' '' '') !default; /* 4 */
+$bits-space-directions: /* 3 */ (
+  (A '')
+  (T '-top')
+  (R '-right')
+  (B '-bottom')
+  (L '-left')
+  (H '')
+  (V '')
+) !default;
 
-$bits-space-sizes:     (n s   m    l) !default; /* 5 */
-$bits-space-size-vals: (0 5px 10px 20px) !default; /* 6 */
+$bits-space-sizes: /* 4 */ (
+  (n 0)
+  (s 5px)
+  (m 10px)
+  (l 20px)
+) !default;
 
 /**
  * Used to adjust the default spacing between components
@@ -59,19 +68,19 @@ $bits-space-size-vals: (0 5px 10px 20px) !default; /* 6 */
  */
 
 @each $type in $bits-space-types {
-  @for $i1 from 1 through length($bits-space-directions) {
-    $dir: nth($bits-space-directions, $i1);
-    $dirVal: nth($bits-space-direction-vals, $i1);
+  @each $direction in $bits-space-directions {
+    $dirName: nth($direction, 1);
+    $dirVal: nth($direction, 2);
 
-    @for $i2 from 1 through length($bits-space-sizes) {
-      $size: nth($bits-space-sizes, $i2);
-      $sizeVal: nth($bits-space-size-vals, $i2);
+    @each $size in $bits-space-sizes {
+      $sizeName: nth($size, 1);
+      $sizeVal: nth($size, 2);
 
-      .#{$bits-utils-ns}u-#{$type}#{$dir}#{$size} {
-        @if $dir == 'H' {
+      .#{$bits-utils-ns}u-#{$type}#{$dirName}#{$sizeName} {
+        @if $dirName == 'H' {
           #{$type}-left: $sizeVal;
           #{$type}-right: $sizeVal;
-        } @else if $dir == 'V' {
+        } @else if $dirName == 'V' {
           #{$type}-top: $sizeVal;
           #{$type}-bottom: $sizeVal;
         } @else {
