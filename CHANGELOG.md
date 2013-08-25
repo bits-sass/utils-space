@@ -1,5 +1,9 @@
 === HEAD
 
+=== 0.5.0 (August 25, 2013)
+
+* Add !important to all rules
+
 === 0.4.0 (July 20, 2013)
 
 * Rename organization's name to 'Bits.sass'

@@ -78,13 +78,13 @@ $bits-space-sizes: /* 4 */ (
 
       .#{$bits-utils-ns}u-#{$type}#{$dirName}#{$sizeName} {
         @if $dirName == 'H' {
-          #{$type}-left: $sizeVal;
-          #{$type}-right: $sizeVal;
+          #{$type}-left: $sizeVal !important;
+          #{$type}-right: $sizeVal !important;
         } @else if $dirName == 'V' {
-          #{$type}-top: $sizeVal;
-          #{$type}-bottom: $sizeVal;
+          #{$type}-top: $sizeVal !important;
+          #{$type}-bottom: $sizeVal !important;
         } @else {
-          #{$type}#{$dirVal}: $sizeVal;
+          #{$type}#{$dirVal}: $sizeVal !important;
         }
       }
     }
