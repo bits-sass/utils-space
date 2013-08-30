@@ -8,9 +8,11 @@
  * It is recommended to override these.
  *
  * 1. Utility namespace.
+ * 2. Typically size of component spacing.
  */
 
 $bits-utils-ns: 'bits-' !default; /* 1 */
+$bits-space-collapse-margin: 20px !default; /* 2 */
 
 /**
  * Spacing (padding and margin)
@@ -60,6 +62,86 @@ $bits-space-stretch-sizes: /* 2 */ (
   (m 10px)
   (l 20px)
 ) !default;
+
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Collapse first child's top margin
+ *
+ * Use margin collapsing to ensure proper spacing between the first child
+ * and parent's top padding.
+ *
+ * See http://codepen.io/thejameskyle/details/pthGd for more.
+ *
+ * --------------
+ * Example usage:
+ * --------------
+ *
+ * <style>
+ *   .Module { padding: 20px; }
+ *   p { margin-top: 20px; }
+ * </style>
+ *
+ * <div class="Module u-collapseTop">
+ *   <p>
+ *     ...
+ *   </p>
+ *
+ *   <p>
+ *     ...
+ *   </p>
+ * </div>
+ */
+
+.u-collapseTop {
+  padding-top: 0 !important;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 1px;
+    margin-bottom: $bits-space-collapse-margin - 1;
+  }
+}
+
+/**
+ * Collapse last child's bottom margin
+ *
+ * Use margin collapsing to ensure proper spacing between the last child
+ * and parent's bottom padding.
+ *
+ * See http://codepen.io/thejameskyle/details/pthGd for more.
+ *
+ * --------------
+ * Example usage:
+ * --------------
+ *
+ * <style>
+ *   .Module { padding: 20px; }
+ *   p { margin-bottom: 20px; }
+ * </style>
+ *
+ * <div class="Module u-collapseBottom">
+ *   <p>
+ *     ...
+ *   </p>
+ *
+ *   <p>
+ *     ...
+ *   </p>
+ * </div>
+ */
+
+.u-collapseBottom {
+  padding-bottom: 0 !important;
+
+  &:after {
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: $bits-space-collapse-margin - 1;
+  }
+}
 
 /* -------------------------------------------------------------------------- */
 

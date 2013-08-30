@@ -18,6 +18,10 @@ See [demo](https://rawgithub.com/bits-sass/utils-space/master/demo/index.html).
 
 * `bits-utils-ns` - utilities namespace, defaults to 'bits-'
 
+### Margin collapsing
+
+* `bits-space-collapse-margin` - size of margin top / bottom that should be collapsed
+
 ### Spacing
 
 * `bits-space-spacing-directions` - specifies list of generated `<D>` directions
@@ -36,6 +40,11 @@ See [demo](https://rawgithub.com/bits-sass/utils-space/master/demo/index.html).
 * `bits-space-stretch-sizes` - specifies list of generated `<s>` sizes
 
 ## Available utility classes
+
+### Margin collapsing
+
+* `u-collapseTop` - collapse first child's top margin
+* `u-collapseBottom` - collapse last child's bottom margin
 
 ### Spacing
 

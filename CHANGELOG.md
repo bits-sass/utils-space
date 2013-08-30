@@ -4,6 +4,7 @@
 * Add new `u-stretchXx` utilities
 * Optimize rules generator
 * Add demo page
+* Add new `u-collapse[Top|Bottom]` utilities
 
 === 0.5.0 (August 25, 2013)
 
