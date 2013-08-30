@@ -1,5 +1,9 @@
 === HEAD
 
+* Add new `u-gutterXx` utilities
+* Add new `u-stretchXx` utilities
+* Optimize rules generator
+
 === 0.5.0 (August 25, 2013)
 
 * Add !important to all rules
