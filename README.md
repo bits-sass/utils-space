@@ -12,7 +12,7 @@ Read more about [Bits.sass toolkit](https://github.com/bits-sass/bits.sass).
 
 ## Demo
 
-See [demo](demo/index.html).
+See [demo](https://rawgithub.com/bits-sass/utils-space/master/demo/index.html).
 
 ## Available SASS variables
 
