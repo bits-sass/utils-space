@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Space [utility] - Bits.sass</title>
+    <link rel="stylesheet" href="space.css">
+    <style>
+      body { margin: 0 auto; width: 600px; background-color: #eee; }
+      body, div { border: 1px solid red;  }
+      div {  background-color: #ccc; }
+      div:before { content: "`" attr(class) "`"; font-family: monospace; }
+
+    </style>
+  </head>
+  <body>
+    <h1>
+      Space utility demo page
+    </h1>
+
+    <h2>
+      Spacing (margins and paddings)
+    </h2>
+
+    <h3>
+      All
+      <code>
+        `u-[type]A[size]`
+      </code>
+    </h3>
+
+    <div class="bits-u-marginAl"></div>
+    <div class="bits-u-marginAm"></div>
+    <div class="bits-u-marginAs"></div>
+    <div class="bits-u-marginAn"></div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-paddingAl"></div>
+    <div class="bits-u-paddingAm"></div>
+    <div class="bits-u-paddingAs"></div>
+    <div class="bits-u-paddingAn"></div>
+
+    <h3>
+      Vertical
+      <code>
+        `u-[type]V[size]`
+      </code>
+    </h3>
+
+    <div class="bits-u-marginVl"></div>
+    <div class="bits-u-marginVm"></div>
+    <div class="bits-u-marginVs"></div>
+    <div class="bits-u-marginVn"></div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-paddingVl"></div>
+    <div class="bits-u-paddingVm"></div>
+    <div class="bits-u-paddingVs"></div>
+    <div class="bits-u-paddingVn"></div>
+
+    <h3>
+      Horizontal
+      <code>
+        `u-[type]H[size]`
+      </code>
+    </h3>
+
+    <div class="bits-u-marginHl"></div>
+    <div class="bits-u-marginHm"></div>
+    <div class="bits-u-marginHs"></div>
+    <div class="bits-u-marginHn"></div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-paddingHl"></div>
+    <div class="bits-u-paddingHm"></div>
+    <div class="bits-u-paddingHs"></div>
+    <div class="bits-u-paddingHn"></div>
+
+    <h3>
+      Top
+      <code>
+        `u-[type]T[size]`
+      </code>
+    </h3>
+
+    <div class="bits-u-marginTl"></div>
+    <div class="bits-u-marginTm"></div>
+    <div class="bits-u-marginTs"></div>
+    <div class="bits-u-marginTn"></div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-paddingTl"></div>
+    <div class="bits-u-paddingTm"></div>
+    <div class="bits-u-paddingTs"></div>
+    <div class="bits-u-paddingTn"></div>
+
+    <h3>
+      Right
+      <code>
+        `u-[type]R[size]`
+      </code>
+    </h3>
+
+    <div class="bits-u-marginRl" style="text-align: right"></div>
+    <div class="bits-u-marginRm" style="text-align: right"></div>
+    <div class="bits-u-marginRs" style="text-align: right"></div>
+    <div class="bits-u-marginRn" style="text-align: right"></div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-paddingRl" style="text-align: right"></div>
+    <div class="bits-u-paddingRm" style="text-align: right"></div>
+    <div class="bits-u-paddingRs" style="text-align: right"></div>
+    <div class="bits-u-paddingRn" style="text-align: right"></div>
+
+    <h3>
+      Bottom
+      <code>
+        `u-[type]B[size]`
+      </code>
+    </h3>
+
+    <div class="bits-u-marginBl"></div>
+    <div class="bits-u-marginBm"></div>
+    <div class="bits-u-marginBs"></div>
+    <div class="bits-u-marginBn"></div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-paddingBl"></div>
+    <div class="bits-u-paddingBm"></div>
+    <div class="bits-u-paddingBs"></div>
+    <div class="bits-u-paddingBn"></div>
+
+    <h3>
+      Left
+      <code>
+        `u-[type]L[size]`
+      </code>
+    </h3>
+
+    <div class="bits-u-marginLl"></div>
+    <div class="bits-u-marginLm"></div>
+    <div class="bits-u-marginLs"></div>
+    <div class="bits-u-marginLn"></div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-paddingLl"></div>
+    <div class="bits-u-paddingLm"></div>
+    <div class="bits-u-paddingLs"></div>
+    <div class="bits-u-paddingLn"></div>
+
+    <h2>
+      Gutters
+    </h2>
+
+    <h3>
+      All
+      <code>
+        `u-gutterA[size]`
+      </code>
+    </h3>
+
+    <div class="bits-u-gutterAl">
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <span style="display: block; clear: both;"></span>
+    </div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-gutterAm">
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <span style="display: block; clear: both;"></span>
+    </div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-gutterAs">
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <span style="display: block; clear: both;"></span>
+    </div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-gutterAn">
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <span style="display: block; clear: both;"></span>
+    </div>
+
+    <h3>
+      Vertical
+      <code>
+        `u-gutterV[size]`
+      </code>
+    </h3>
+
+    <div class="bits-u-gutterVl">
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <span style="display: block; clear: both;"></span>
+    </div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-gutterVm">
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <span style="display: block; clear: both;"></span>
+    </div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-gutterVs">
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <span style="display: block; clear: both;"></span>
+    </div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-gutterVn">
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <span style="display: block; clear: both;"></span>
+    </div>
+
+    <h3>
+      Horizontal
+      <code>
+        `u-gutterH[size]`
+      </code>
+    </h3>
+
+    <div class="bits-u-gutterHl">
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <span style="display: block; clear: both;"></span>
+    </div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-gutterHm">
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <span style="display: block; clear: both;"></span>
+    </div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-gutterHs">
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <span style="display: block; clear: both;"></span>
+    </div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-gutterHn">
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <div class="bits-u-gutter-item" style="float: left;"></div>
+      <span style="display: block; clear: both;"></span>
+    </div>
+
+    <h2>
+      Stretching
+    </h2>
+
+    <h3>
+      Horizontal
+      <code>
+        `u-stretchH[size]`
+      </code>
+    </h3>
+
+    <div class="bits-u-stretchHl"></div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-stretchHm"></div>
+
+    <hr class="bits-u-marginVl">
+
+    <div class="bits-u-stretchHs"></div>
+
+  </body>
+</html>

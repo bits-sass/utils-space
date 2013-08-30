@@ -2,5 +2,8 @@
   "name": "bits-sass-utils-space",
   "version": "0.5.0",
   "author": "Lukáš Mladý",
-  "main": "_space.scss"
+  "main": "_space.scss",
+  "ignore": [
+    "demo"
+  ]
 }

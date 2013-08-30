@@ -3,6 +3,7 @@
 * Add new `u-gutterXx` utilities
 * Add new `u-stretchXx` utilities
 * Optimize rules generator
+* Add demo page
 
 === 0.5.0 (August 25, 2013)
 
