@@ -114,9 +114,7 @@ $bits-space-stretch-sizes: /* 2 */ (
  *
  * See http://codepen.io/thejameskyle/details/pthGd for more.
  *
- * --------------
- * Example usage:
- * --------------
+ * Example HTML:
  *
  * <style>
  *   .Module { padding: 20px; }
@@ -145,11 +143,10 @@ $bits-space-stretch-sizes: /* 2 */ (
   }
 }
 
-/* -------------------------------------------------------------------------- */
+/* Spacing
+   ========================================================================== */
 
 /**
- * Spacing
- *
  * Use to adjust the default spacing between components.
  *
  * IMPORTANT: Use with great care!
@@ -170,20 +167,17 @@ $bits-space-stretch-sizes: /* 2 */ (
  * m = medium
  * l = large
  *
- * --------------
- * Example usage:
- * --------------
+ * Example HTML:
  *
  * <div class="Module u-marginBn u-paddingAm">
  *   ...
  * </div>
  */
 
-/* -------------------------------------------------------------------------- */
+/* Gutters
+   ========================================================================== */
 
 /**
- * Gutters
- *
  * Use to insert gutter inbetween element's children.
  *
  * u-gutter<TYPE><size>
@@ -196,9 +190,7 @@ $bits-space-stretch-sizes: /* 2 */ (
  * m = medium
  * l = large
  *
- * --------------
- * Example usage:
- * --------------
+ * Example HTML:
  *
  * <ul class="Grid Grid--2col u-gutterHm">
  *   <li class="Grid-cell u-gutter-item">
@@ -213,11 +205,10 @@ $bits-space-stretch-sizes: /* 2 */ (
  * </ul>
  */
 
-/* -------------------------------------------------------------------------- */
+/* Stretching
+   ========================================================================== */
 
 /**
- * Stretch
- *
  * Use to stretch the element to side / up and down OR all sides
  *
  * u-stretch<TYPE><size>
@@ -230,9 +221,7 @@ $bits-space-stretch-sizes: /* 2 */ (
  * m = medium
  * l = large
  *
- * --------------
- * Example usage:
- * --------------
+ * Example HTML:
  *
  * <div class="IHaveSomePadding">
  *   <div class="u-stretchHm">
@@ -240,8 +229,6 @@ $bits-space-stretch-sizes: /* 2 */ (
  *   </div>
  * </div>
  */
-
-
 
 /* Utilities generator
    ========================================================================== */
