@@ -93,7 +93,7 @@ $bits-space-stretch-sizes: /* 2 */ (
  * </div>
  */
 
-.u-collapseTop {
+.#{$bits-utils-ns}u-collapseTop {
   padding-top: 0 !important;
 
   &:before {
@@ -132,7 +132,7 @@ $bits-space-stretch-sizes: /* 2 */ (
  * </div>
  */
 
-.u-collapseBottom {
+.#{$bits-utils-ns}u-collapseBottom {
   padding-bottom: 0 !important;
 
   &:after {
