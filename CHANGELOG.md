@@ -6,6 +6,7 @@
 * Add demo page
 * Add new `u-collapse[Top|Bottom]` utilities
 * Add namespace var before `u-collapse[Top|Bottom]`
+* Use new style for comments
 
 === 0.5.0 (August 25, 2013)
 
