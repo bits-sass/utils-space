@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.6.0 (September 2, 2013)
+
 * Add new `u-gutterXx` utilities
 * Add new `u-stretchXx` utilities
 * Optimize rules generator
