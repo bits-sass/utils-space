@@ -59,6 +59,32 @@ See [demo](https://rawgithub.com/bits-sass/utils-space/master/demo/index.html).
 
 * `u-stretch<T><s>` (adjustable) - stretching of size `s` and type `T`
 
+## Usage
+
+List of items with a medium vertical gutter.
+
+```html
+<ul class="u-gutterVm">
+  <li class="u-gutter-item">…</li>
+  <li class="u-gutter-item">…</li>
+  <li class="u-gutter-item">…</li>
+  <li class="u-gutter-item">…</li>
+</ul>
+```
+
+Grid that has a small gutter between cells.
+
+```html
+<div class="Grid u-gutterAs">
+  <div class="Grid-cell">
+    …
+  </div>
+  <div class="Grid-cell">
+    …
+  </div>
+</div>
+```
+
 ## Requirements
 
 * Sass 3.2+

@@ -3,6 +3,7 @@
 * Rewrite comments
 * `bits-space-gutter-supported-children` now takes asterisk `*`, `li` and class
 selectors without the dot `.`
+* Add usage to README
 
 === 0.6.0 (September 2, 2013)
 
