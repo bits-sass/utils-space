@@ -35,14 +35,14 @@ $bits-space-spacing-sizes: /* 2 */ (
 /**
  * Gutters
  *
- * 1. List of supported selectors. For example `*`, `Grid-cell`, etc.
- *    `u-gutter-item` is supported by default.
+ * 1. List of supported selectors.
+ *    You can use: `*`, `li` and any class name without a dot `.`
  * 2. Specifies list of generated <type>s.
  * 3. Specifies list of generated <size>s.
  */
 
 $bits-space-gutter-supported-children: ( /* 1 */
-  unquote(".#{$bits-utils-ns}u-gutter-item")
+  u-gutter-item
 ) !default;
 $bits-space-gutter-types:(A H V) !default; /* 2 */
 $bits-space-gutter-sizes: /* 3 */ (
@@ -461,7 +461,21 @@ $bits-space-packages: (
         $marginSelector: unquote(".#{$bits-utils-ns}u-gutterA#{$sizeName}");
 
         @each $child in $bits-space-gutter-supported-children {
-          $paddingSelectorArray: $paddingSelectorArray, unquote(".#{$bits-utils-ns}u-gutterA#{$sizeName} > #{$child}");
+          $dot: '.';
+
+          @if $child == '*' or $child == 'li' {
+            $dot: '';
+          }
+
+          $child-prefix: '';
+
+          @if $child == 'u-gutter-item' {
+            $child-prefix: $bits-utils-ns;
+          }
+
+          $paddingSelectorArray: $paddingSelectorArray, unquote(
+            ".#{$bits-utils-ns}u-gutterA#{$sizeName} > #{$dot}#{$child-prefix}#{$child}"
+          );
         }
 
         $paddingSelector: $paddingSelectorArray;
@@ -496,7 +510,21 @@ $bits-space-packages: (
         $marginSelector: unquote(".#{$bits-utils-ns}u-gutterV#{$sizeName}");
 
         @each $child in $bits-space-gutter-supported-children {
-          $paddingSelectorArray: $paddingSelectorArray, unquote(".#{$bits-utils-ns}u-gutterV#{$sizeName} > #{$child}");
+          $dot: '.';
+
+          @if $child == '*' or $child == 'li' {
+            $dot: '';
+          }
+
+          $child-prefix: '';
+
+          @if $child == 'u-gutter-item' {
+            $child-prefix: $bits-utils-ns;
+          }
+
+          $paddingSelectorArray: $paddingSelectorArray, unquote(
+              ".#{$bits-utils-ns}u-gutterV#{$sizeName} > #{$dot}#{$child-prefix}#{$child}"
+          );
         }
 
         $paddingSelector: $paddingSelectorArray;
@@ -527,7 +555,21 @@ $bits-space-packages: (
         $marginSelector: unquote(".#{$bits-utils-ns}u-gutterH#{$sizeName}");
 
         @each $child in $bits-space-gutter-supported-children {
-          $paddingSelectorArray: $paddingSelectorArray, unquote(".#{$bits-utils-ns}u-gutterH#{$sizeName} > #{$child}");
+          $dot: '.';
+
+          @if $child == '*' or $child == 'li' {
+            $dot: '';
+          }
+
+          $child-prefix: '';
+
+          @if $child == 'u-gutter-item' {
+            $child-prefix: $bits-utils-ns;
+          }
+
+          $paddingSelectorArray: $paddingSelectorArray, unquote(
+              ".#{$bits-utils-ns}u-gutterH#{$sizeName} > #{$dot}#{$child-prefix}#{$child}"
+          );
         }
 
         $paddingSelector: $paddingSelectorArray;

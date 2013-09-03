@@ -1,6 +1,8 @@
 === HEAD
 
 * Rewrite comments
+* `bits-space-gutter-supported-children` now takes asterisk `*`, `li` and class
+selectors without the dot `.`
 
 === 0.6.0 (September 2, 2013)
 
