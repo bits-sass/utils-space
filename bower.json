@@ -1,6 +1,6 @@
 {
   "name": "bits-sass-utils-space",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "author": "Lukáš Mladý",
   "main": "_space.scss",
   "ignore": [

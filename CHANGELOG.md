@@ -1,5 +1,7 @@
 === HEAD
 
+=== 0.7.0 (September 3, 2013)
+
 * Rewrite comments
 * `bits-space-gutter-supported-children` now takes asterisk `*`, `li` and class
 selectors without the dot `.`
